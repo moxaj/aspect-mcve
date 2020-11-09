@@ -7,4 +7,8 @@ public class MyService {
   public Object aroundController(MyAspect.Callable<?> callable) throws Throwable {
     return callable.call();
   }
+
+  public void foo() {
+
+  }
 }

@@ -38,6 +38,7 @@ public class MyAspect {
   @Around("inDomain() && inController()")
   public Object aroundController(ProceedingJoinPoint joinPoint) throws Throwable {
     joinPoint.proceed();                                   // Does not print the message below
+    myService.foo();                                       // Does not print the message below
     return myService.aroundController(joinPoint::proceed); // Prints the message below
   }
 
