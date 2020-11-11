@@ -8,7 +8,5 @@ public class MyService {
     return callable.call();
   }
 
-  public void foo() {
-
-  }
+  public void foo() {}
 }

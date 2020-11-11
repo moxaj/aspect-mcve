@@ -16,24 +16,16 @@ public class MyAspect {
   }
 
   @Pointcut("within(aspect.mcve..*)")
-  public void inDomain() {
-
-  }
+  public void inDomain() {}
 
   @Pointcut("@target(org.springframework.stereotype.Service)")
-  public void inService() {
-
-  }
+  public void inService() {}
 
   @Pointcut("execution(* aspect.mcve.MyService.*(..))")
-  public void inMyService() {
-
-  }
+  public void inMyService() {}
 
   @Pointcut("@target(org.springframework.web.bind.annotation.RestController)")
-  public void inController() {
-
-  }
+  public void inController() {}
 
   @Around("inDomain() && inController()")
   public Object aroundController(ProceedingJoinPoint joinPoint) throws Throwable {
@@ -51,4 +43,5 @@ public class MyAspect {
   public interface Callable<T> {
     T call() throws Throwable;
   }
+
 }
