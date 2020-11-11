@@ -22,6 +22,7 @@ repositories {
 dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-web'
   implementation 'org.springframework.boot:spring-boot-starter-aop'
+  implementation 'org.springframework:spring-instrument'
   annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
   providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
   testImplementation('org.springframework.boot:spring-boot-starter-test') {

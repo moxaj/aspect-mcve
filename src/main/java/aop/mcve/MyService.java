@@ -4,9 +4,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MyService {
-  public Object aroundController(MyAspect.Callable<?> callable) throws Throwable {
+  public interface Callable<T> {
+    T call() throws Throwable;
+  }
+
+  public Object aroundController(Callable<?> callable) throws Throwable {
     return callable.call();
   }
 
-  public void foo() {}
+  public void serviceMethod() {}
 }
