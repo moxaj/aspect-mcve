@@ -1,4 +1,4 @@
-package aspect.mcve;
+package aop.mcve;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

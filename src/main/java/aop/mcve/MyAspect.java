@@ -1,4 +1,4 @@
-package aspect.mcve;
+package aop.mcve;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -15,13 +15,13 @@ public class MyAspect {
     this.myService = myService;
   }
 
-  @Pointcut("within(aspect.mcve..*)")
+  @Pointcut("within(aop.mcve..*)")
   public void inDomain() {}
 
   @Pointcut("@target(org.springframework.stereotype.Service)")
   public void inService() {}
 
-  @Pointcut("execution(* aspect.mcve.MyService.*(..))")
+  @Pointcut("execution(* aop.mcve.MyService.*(..))")
   public void inMyService() {}
 
   @Pointcut("@target(org.springframework.web.bind.annotation.RestController)")
